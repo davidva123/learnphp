@@ -30,7 +30,8 @@ $bob = new Person( 'Bob', 'Iger' );
 $people = array( $rob, $joe, $erin, $steve, $bill, $walt, $bob );
 
  usort($people,function($a,$b){
- 
+  return $a->get_last_name() <=> $b->get_last_name();
+
  });
 
 
